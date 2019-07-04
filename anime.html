@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<style>
+			#image {
+  height: 256px;
+  width: 256px;
+background: 
+url('https://cdn.codeandweb.com/blog/2016/05/10/how-to-create-a-sprite-sheet/spritestrip.png') 0px 0px;
+}
+
+			body{
+			height:100%;;
+			background-image:url("images/color.jpg");
+			}
+			#bannerdiv{
+			width:80%;
+			height:200px;
+			margin:auto;
+			}
+			#menudiv{
+			background-color:white;
+			height:50px;
+			width:80%;
+			margin:auto;
+			}
+			#menudiv table{
+			background-color:skyblue;
+			width:100%;
+			height:50px;
+			}
+			#menudiv td{
+			width:14%;
+			text-align:center;
+			color:maroon;
+			}
+			#menudiv a:link{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#menudiv a:visited{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#bodydiv{
+			color:red;
+			background-image:linear-gradient(white,pink);
+			height:400px;
+			width:80%;
+			margin:auto;
+			
+			}
+		#footerdiv {
+		background-image:linear-gradient(#f45042,#4f4747);
+		height:150px;
+		width:80%;
+		margin:auto;
+		
+		
+		}
+		#footerdiv p{
+		color:white;
+		text-align:center;
+		padding:5px;
+		
+		}
+		#footerdiv a:link{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:visited{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+		
+		</style>
+		
+    <link href="css/tinyslide.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" /></script>
+    <script src="js/tinyslide.js" /></script>
+  </head>
+  <body>
+  <div id="bannerdiv">
+    <section id="tiny" class="tinyslide">
+      <aside class="slides">
+        <figure>
+          <img src="images/slide1.jpg" alt="" />
+          <figcaption>
+            Safari
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide2.jpg" alt="" />
+          <figcaption>
+            Highway
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide3.jpg" alt="" />
+          <figcaption>
+            Scenary
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide4.jpg" alt="" />
+          <figcaption>
+            Buddha
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide5.jpg" alt="" />
+          <figcaption>
+         Mountain
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+    <script>
+      var tiny = $('#tiny').tiny().data('api_tiny');
+    </script>
+	
+	</div>
+	<div id="menudiv">
+	
+<table> 
+<tr>
+	<td> <a href=index.html> Home
+	</a></td>
+	<td><a href=intro.html>Introduction</a></td>
+		<td><a href=jsworld.html>Jsworld</a></td>
+	<td><a href=score.html>Score</a></td>
+	<td><a href=shop.html>Shop</a></td>
+	<td><a href=map.html>Map</a></td>
+	<td><a href=anime.html>Anime</a></td>
+</tr>
+</table>
+	</div>
+<div id="bodydiv">
+<div id="demo">
+<h2 style= "text-align:center">Hover on the image to see the animation</h2>
+<p id="image" onmouseover="animateScript();" onmouseout="stopAnimate();"> </p>
+</div>
+<script type="text/javascript">
+	var tID; //we will use this variable to clear the setInterval()
+		function animateScript() {
+		var    position = 256; //start position for the image slicer
+		const  interval = 100; //100 ms of interval for the setInterval()
+		tID = setInterval ( () => {
+		document.getElementById("image").style.backgroundPosition = 
+		`-${position}px 0px`; 
+		//we use the ES6 template literal to insert the variable "position"
+		if (position < 1536)
+		{ position = position + 256;}
+		//we increment the position by 256 each time
+		else
+		{ position = 256; }
+		//reset the position to 256px, once position exceeds 1536px
+		}
+		, interval ); //end of setInterval
+		} //end of animateScript()
+
+	var tID; //we will use this variable to clear the setInterval()
+		function stopAnimate() {
+		clearInterval(tID);
+		} //end of stopAnimate()
+		function animateScript() {
+		var    position = 256; //start position for the image slicer
+		const  interval = 100; //100 ms of interval for the setInterval()
+		const  diff = 256;     //diff as a variable for position offset
+		tID = setInterval ( () => {
+		document.getElementById("image").style.backgroundPosition = 
+		`-${position}px 0px`; 
+		//we use the ES6 template literal to insert the variable "position"
+		if (position < 1536)
+		{ position = position + diff;}
+		//we increment the position by 256 each time
+		else
+		{ position = 256; }
+		//reset the position to 256px, once position exceeds 1536px
+		}
+		, interval ); //end of setInterval
+		} //end of animateScript()
+</script>
+
+</div>
+
+<div id="footerdiv">
+<p>
+<a href=index.html>Home</a> | 
+<a href=intro.html>Introduction</a> | 
+<a href=score.html>Score</a> | 
+<a href=shop.html>Shop</a> |
+ <a href=map.html>Map</a> |
+ <a href=anime.html>Anime</a>
+<br/>
+copyright all reserved @amrita banjade.&copy; 2019
+</p>
+
+</div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<style>
+			body{
+			height:100%;;
+			background-image:url("images/color.jpg");
+			}
+			#bannerdiv{
+			width:80%;
+			height:200px;
+			margin:auto;
+			}
+			#menudiv{
+			background-color:white;
+			height:50px;
+			width:80%;
+			margin:auto;
+			}
+			#menudiv table{
+			background-color:skyblue;
+			width:100%;
+			height:50px;
+			}
+			#menudiv td{
+			width:14%;
+			text-align:center;
+			color:maroon;
+			}
+			#menudiv a:link{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#menudiv a:visited{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#bodydiv{
+			color:red;
+			background-image:linear-gradient(white,pink);
+			height:700px;
+			width:80%;
+			margin:auto;
+			padding:10px;
+			
+			}
+		#footerdiv {
+		background-image:linear-gradient(#f45042,#4f4747);
+		height:150px;
+		width:80%;
+		margin:auto;
+		
+		
+		}
+		#footerdiv p{
+		color:white;
+		text-align:center;
+		padding:5px;
+		
+		}
+		#footerdiv a:link{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:visited{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+		
+		</style>
+		
+    <link href="css/tinyslide.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" /></script>
+    <script src="js/tinyslide.js" /></script>
+  </head>
+  <body>
+  <div id="bannerdiv">
+    <section id="tiny" class="tinyslide">
+      <aside class="slides">
+        <figure>
+          <img src="images/slide1.jpg" alt="" />
+          <figcaption>
+            Safari
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide2.jpg" alt="" />
+          <figcaption>
+            Highway
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide3.jpg" alt="" />
+          <figcaption>
+            Scenary
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide4.jpg" alt="" />
+          <figcaption>
+            Buddha
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide5.jpg" alt="" />
+          <figcaption>
+         Mountain
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+    <script>
+      var tiny = $('#tiny').tiny().data('api_tiny');
+    </script>
+	
+	</div>
+	<div id="menudiv">
+	
+<table> 
+<tr>
+	<td> <a href=index.html> Home
+	</a></td>
+	<td><a href=intro.html>Introduction</a></td>
+		<td><a href=jsworld.html>Jsworld</a></td>
+	<td><a href=score.html>Score</a></td>
+	<td><a href=shop.html>Shop</a></td>
+	<td><a href=map.html>Map</a></td>
+	<td><a href=anime.html>Anime</a></td>
+</tr>
+</table>
+	</div>
+<div id="bodydiv">
+<h1 style="color:maroon;text-align:center;font-size:40px;font-family:algerian;"> <u>Welcome to my shop</u></h1>
+<table align=center>
+<tr>
+<td>
+<a href="#" onclick="image1()"><img style="border:6px groove white" src="images/image1.jpg"height="100" width="100"/></a>
+</td>
+<td rowspan="6">
+<img src="images/image1.jpg"height="600" width="700" id="img" style="border:6px groove white"/>
+<script>
+function image1(){
+    var image="images/image1.jpg"
+     document.getElementById("img").src=image.replace('300*300','300*300');
+	 }
+	 
+function image2(){
+    var image="images/image2.jpg"
+     document.getElementById("img").src=image.replace('200*200','200*200');
+	 }
+	 function image3(){
+    var image="images/image3.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image4(){
+    var image="images/image4.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image5(){
+    var image="images/image5.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image6(){
+    var image="images/image6.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image7(){
+    var image="images/image7.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image8(){
+    var image="images/image8.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image9(){
+    var image="images/image9.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image10(){
+    var image="images/image10.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image11(){
+    var image="images/image11.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 function image12(){
+    var image="images/image10.jpg"
+     document.getElementById("img").src=image.replace('400*400','400*400');
+	 }
+	 </script>
+	 
+</td>
+<td rowspan=6>
+<table> 
+<tr>
+<td><a href="#" onclick="image7()"><img style="border:6px groove white" src="images/image7.jpg"height="100" width="100" /></a></td>
+</tr>
+<tr>
+<td><a href="#" onclick="image8()"><img style="border:6px groove white" src="images/image8.jpg"height="100" width="100" /></a></td>
+</tr>
+<tr>
+<td><a href="#" onclick="image9()"><img style="border:6px groove white" src="images/image9.jpg"height="100" width="100" /></a></td>
+</tr>
+<tr>
+<td><a href="#" onclick="image10()"><img style="border:6px groove white" src="images/image10.jpg"height="100" width="100" /></a></td>
+</tr>
+<tr>
+<td><a href="#" onclick="image11()"><img style="border:6px groove white" src="images/image11.jpg"height="100" width="100" /></a></td>
+</tr>
+<tr>
+<td><a href="#" onclick="image12()"><img style="border:6px groove white" src="images/image10.jpg"height="100" width="100" /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#" onclick="image2()"><img style="border:6px groove white" src="images/image2.jpg"height="100" width="100" /></a></td>
+</tr>
+<tr>
+<td>
+<a href="#" onclick="image3()"><img style="border:6px groove white" src="images/image3.jpg"height="100" width="100"/></a></td>
+</tr>
+<tr>
+<td>
+<a href="#" onclick="image4()"><img style="border:6px groove white" src="images/image4.jpg"height="100" width="100" /></a></td>
+<tr>
+<tr>
+<td>
+<a href="#" onclick="image5()"><img style="border:6px groove white" src="images/image5.jpg"height="100" width="100"/></a></td>
+</tr>
+
+</table>
+
+</div>
+
+<div id="footerdiv">
+<p>
+<a href=index.html>Home</a> | 
+<a href=intro.html>Introduction</a> | 
+<a href=score.html>Score</a> | 
+<a href=shop.html>Shop</a> |
+ <a href=map.html>Map</a> |
+ <a href=anime.html>Anime</a>
+<br/>
+copyright all reserved @amrita banjade.&copy; 2019
+</p>
+
+</div>
+
+
+
+  </body>
+</html>

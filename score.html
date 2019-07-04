@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<style>
+			body{
+			height:100%;;
+			background-image:url("images/color.jpg");
+			}
+			#bannerdiv{
+			width:80%;
+			height:200px;
+			margin:auto;
+			}
+			#menudiv{
+			background-color:white;
+			height:50px;
+			width:80%;
+			margin:auto;
+			}
+			#menudiv table{
+			background-color:skyblue;
+			width:100%;
+			height:50px;
+			}
+			#menudiv td{
+			width:14%;
+			text-align:center;
+			color:maroon;
+			}
+			#menudiv a:link{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#menudiv a:visited{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#bodydiv{
+			color:red;
+			background-image:linear-gradient(white,pink);
+			height:500px;
+			width:80%;
+			margin:auto;
+			padding:5px;
+			text-align:center;
+			
+			
+			}
+		#footerdiv {
+		background-image:linear-gradient(#f45042,#4f4747);
+		height:150px;
+		width:80%;
+		margin:auto;
+		
+		
+		}
+		#footerdiv p{
+		color:white;
+		text-align:center;
+		padding:5px;
+		
+		}
+		#footerdiv a:link{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:visited{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			
+			#body_leftdiv{
+			width:80%;
+			align:left;
+			height:auto;
+			}
+			#body_rightdiv{
+			width:20%;
+			align:right;
+			height:auto;
+			}
+		
+		</style>
+		
+    <link href="css/tinyslide.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" /></script>
+    <script src="js/tinyslide.js" /></script>
+  </head>
+  <body>
+  <div id="bannerdiv">
+    <section id="tiny" class="tinyslide">
+      <aside class="slides">
+        <figure>
+          <img src="images/slide1.jpg" alt="" />
+          <figcaption>
+            Safari
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide2.jpg" alt="" />
+          <figcaption>
+            Highway
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide3.jpg" alt="" />
+          <figcaption>
+            Scenary
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide4.jpg" alt="" />
+          <figcaption>
+            Buddha
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide5.jpg" alt="" />
+          <figcaption>
+         Mountain
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+    <script>
+      var tiny = $('#tiny').tiny().data('api_tiny');
+    </script>
+	
+	</div>
+	<div id="menudiv">
+	
+<table> 
+<tr>
+	<td> <a href=index.html> Home
+	</a></td>
+	<td><a href=intro.html>Introduction</a></td>
+	<td><a href=jsworld.html>Jsworld</a></td>
+	<td><a href=score.html>Score</a></td>
+	<td><a href=shop.html>Shop</a></td>
+	<td><a href=map.html>Map</a></td>
+	<td><a href=anime.html>Anime</a></td>
+</tr>
+</table>
+	</div>
+<div id="bodydiv">
+<div id="body_leftdiv">
+<script type="text/javascript">
+		var names=["Bimal","Saroj","Rinki","Kiran","Ramesh","Bisal"]; //Array for name of students
+		var score=[95, 80, 84, 65,98,70];							// Array for score obtained by students 
+		
+		var total= score[0]+score[1]+score[2]+score[3]+score[4]+score[5]; // Calculate the total of scores obtained by the all students
+		var average=total/(score.length);									// Calculate the Average of the scores obtained by the students
+		document.write("The total score of the students is: "+total+"<br/>"); // show the total score of students
+		document.write("The average score of the whole students is : "+average+"<br/>"); // show the average score of students
+		
+		
+		// Coding To show the name of all students with their corresponding scores.
+		var str="";
+		document.write("<br/><b>There are "+names.length+" students in the class. Their details with score obtained are as follows: </b><br/>")
+		
+		for ( var i=0; i<6; i++)
+		{
+			str=names[i]+ " : "+score[i]+"<br/>";
+			document.write(str);
+		}
+		
+		
+		
+		// Coding to show the name of students who obtained score over 90.
+		
+		document.write("<br/><b>The students who obtained score over 90 are as follows:</b><br/>");
+		for (var i=0;i<6;i++)
+		{
+			if (score[i]>=90)
+			{
+				str=names[i]+ " : "+score[i]+"<br/>";
+				document.write(str);
+			
+			}
+			
+		
+		}
+		
+		
+		//Coding to show the name of students and score obtained by them in descending order of score.
+		var text="";
+		document.write("<br/><b>The list of students according to the score obtained in descending order is:</b><br/> ")
+		for (i=0;i<score.length;i++)
+		{
+			for (j=i+1;j<score.length;j++)
+			{
+				if (score[i]<score[j])
+				{
+					w=score[i];
+					n=names[i];
+					score[i]=score[j];
+					names[i]=names[j];
+					score[j]=w;
+					names[j]=n;
+								
+					
+
+				}
+			
+			
+			}
+		
+		}		
+		for (i=0;i<score.length;i++)
+		{
+			document.write(names[i]+" : "+score[i]+"<br>");
+		}
+		
+		
+	
+	
+	
+	</script>
+</div>
+
+
+</div>
+<div id="footerdiv">
+<p>
+<a href=index.html>Home</a> | 
+<a href=intro.html>Introduction</a> | 
+<a href=score.html>Score</a> | 
+<a href=shop.html>Shop</a> |
+ <a href=map.html>Map</a> |
+ <a href=anime.html>Anime</a>
+<br/>
+copyright all reserved @amrita banjade.&copy; 2019
+</p>
+
+</div>
+
+
+
+  </body>
+</html>

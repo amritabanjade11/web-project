@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<style>
+			body{
+			height:100%;;
+		background-image:url("images/color.jpg");
+			}
+			#bannerdiv{
+			width:80%;
+			height:200px;
+			margin:auto;
+			}
+			#menudiv{
+			background-color:white;
+			height:50px;
+			width:80%;
+			margin:auto;
+			}
+			#menudiv table{
+			background-color:skyblue;
+			width:100%;
+			height:50px;
+			}
+			#menudiv td{
+			width:14%;
+			text-align:center;
+			color:maroon;
+			}
+			#menudiv a:link{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#menudiv a:visited{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#bodydiv{
+			color:black;
+			background-image:linear-gradient(white,pink);
+			height:400px;
+			width:80%;
+			margin:auto;
+			padding:10px;
+			font-size:20px;
+			
+			}
+		#footerdiv {
+		background-image:linear-gradient(#f45042,#4f4747);
+		height:150px;
+		width:80%;
+		margin:auto;
+		
+		
+		}
+		#footerdiv p{
+		color:white;
+		text-align:center;
+		padding:5px;
+		
+		}
+		#footerdiv a:link{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:visited{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#moredetails{ display: none;}
+			#LessDetails{ display: none;}
+			#skills{ display: none;}
+			#LessDetails1{ display: none;}
+		
+		</style>
+		
+    <link href="css/tinyslide.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" /></script>
+    <script src="js/tinyslide.js" /></script>
+  </head>
+  <body>
+  <div id="bannerdiv">
+    <section id="tiny" class="tinyslide">
+      <aside class="slides">
+        <figure>
+          <img src="images/slide1.jpg" alt="" />
+          <figcaption>
+            Safari
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide2.jpg" alt="" />
+          <figcaption>
+            Highway
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide3.jpg" alt="" />
+          <figcaption>
+            Scenary
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide4.jpg" alt="" />
+          <figcaption>
+            Himalaya
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide5.jpg" alt="" />
+          <figcaption>
+         Mountain
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+    <script>
+      var tiny = $('#tiny').tiny().data('api_tiny');
+    </script>
+	
+	</div>
+	<div id="menudiv">
+	
+<table> 
+<tr>
+	<td> <a href=index.html> Home
+	</a></td>
+	<td><a href=intro.html>Introduction</a></td>
+	<td><a href=jsworld.html>Jsworld</a></td>
+	<td><a href=score.html>Score</a></td>
+	<td><a href=shop.html>Shop</a></td>
+	<td><a href=map.html>Map</a></td>
+	<td><a href=anime.html>Anime</a></td>
+</tr>
+</table>
+	</div>
+<div id="bodydiv">
+<p>Hello Everyone!!! Welcome to my New page. I am Amrita Banjade all the way from Butwal, Nepal. I completed my bachelor degree in 2017 January and then I came to Japan for my further studies. About my major...</p>
+<br/>
+<a href="#" id="Details" onclick="changeContent();">More Details</a>
+<br>
+<p id="moredetails">
+My Bachelor was in Bussiness Administration for Banking Insurance (BBA-BI). This was my 4 years course in which banking insurance and security analysis was my major concerntration.
+<br/>
+</p>
+<br>
+<a href="#" id="LessDetails" onclick="changeToOriginal();">Less Details</a>
+<p> About my programming skills:</p>
+<br>
+<a href="#" id="Details1" onclick="changeContent1();">MoreDetails</a>
+<p id="skills">
+	In my Bachelor I studied programming language such as C and C++. After coming to Japan, I got chance to study web designing and got to learn about HTML, CSS and JAVAScript.
+</p>
+<br>
+<a href="#" id="LessDetails1" onclick="changeToOriginal1();">LessDetails</a>
+<script type="text/javascript">
+	function changeContent(){
+		document.getElementById("Details").style.display="none";
+		document.getElementById("moredetails").style.display="block";
+		document.getElementById("LessDetails").style.display="block";
+	}
+	function changeToOriginal(){
+		document.getElementById("Details").style.display="block";
+		document.getElementById("moredetails").style.display="none";
+		document.getElementById("LessDetails").style.display="none";
+	}
+     function changeContent1(){
+		document.getElementById("Details1").style.display="none";
+		document.getElementById("skills").style.display="block";
+		document.getElementById("LessDetails1").style.display="block";
+	}
+	function changeToOriginal1(){
+		document.getElementById("Details1").style.display="block";
+		document.getElementById("skills").style.display="none";
+		document.getElementById("LessDetails1").style.display="none";
+	}
+
+</script>
+
+
+
+</div>
+
+<div id="footerdiv">
+<p>
+<a href=index.html>Home</a> | 
+<a href=intro.html>Introduction</a> | 
+<a href=score.html>Score</a> | 
+<a href=shop.html>Shop</a> |
+ <a href=map.html>Map</a> |
+ <a href=anime.html>Anime</a>
+<br/>
+copyright all reserved @amrita banjade.&copy; 2019
+</p>
+
+</div>
+
+
+
+  </body>
+</html>

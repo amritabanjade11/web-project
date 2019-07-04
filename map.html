@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<style>
+			body{
+			height:100%;;
+			background-image:url("images/color.jpg");
+			}
+			#mymap{ 
+				width: 80%;
+   				height: 500px;
+			margin:auto;
+			}
+			#bannerdiv{
+			width:80%;
+			height:200px;
+			margin:auto;
+			}
+			#menudiv{
+			background-color:white;
+			height:50px;
+			width:80%;
+			margin:auto;
+			}
+			#menudiv table{
+			background-color:skyblue;
+			width:100%;
+			height:50px;
+			}
+			#menudiv td{
+			width:14%;
+			text-align:center;
+			color:maroon;
+			}
+			#menudiv a:link{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#menudiv a:visited{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#bodydiv{
+			color:red;
+			background-image:linear-gradient(white,pink);
+			height:500px;
+			width:80%;
+			margin:auto;
+			
+			}
+		#footerdiv {
+		background-image:linear-gradient(#f45042,#4f4747);
+		height:150px;
+		width:80%;
+		margin:auto;
+		
+		
+		}
+		#footerdiv p{
+		color:white;
+		text-align:center;
+		padding:5px;
+		
+		}
+		#footerdiv a:link{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:visited{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+		
+		</style>
+		<script>
+			function initialize(){
+				var map = new google.maps.Map( document.getElementById('mymap'), {
+					
+					center: {lat: 27.6820453, lng:83.3624951 },
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				});
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			function initialize(){
+				var opt = {
+					zoom: 3.5,
+					center: new google.maps.LatLng(27.6853831,83.392882),
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				var mm = document.getElementById("mymap");
+				map = new google.maps.Map(mm, opt);
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(27.6853831,83.392882),
+					map: map,
+					title: "Butwal"
+				});
+				var marker1 = new google.maps.Marker({
+					position: new google.maps.LatLng(28.229651,83.8165301),
+					map: map,
+					title: "Pokhara"
+				});
+				var marker2 = new google.maps.Marker({
+					position: new google.maps.LatLng(27.6147918,84.0445173),
+					map: map,
+					title: "Chitawan"
+				});
+				var marker3 = new google.maps.Marker({
+					position: new google.maps.LatLng(35.0060799,135.6909093),
+					map: map,
+					title: "Kyoto"
+				});
+				var info = new google.maps.InfoWindow({
+				content: "This is my home town"+"<br/>"+"<img src='lumbini.jpg' height=100px width=100px>"
+				});
+				var info1 = new google.maps.InfoWindow({
+				content: "Tourist place"+"<br/>"+"<img src='pokhara.jpg' height=100px width=100px>"
+				});
+				var info2 = new google.maps.InfoWindow({
+				content: "Wild Reserve"+"<br/>"+"<img src='chitwan.jpg' height=100px width=100px>"
+				});
+				var info3 = new google.maps.InfoWindow({
+				content: "Kyoto"+"<br/>"+"<img src='kyoto.jpg' height=100px width=100px>"
+				});
+				google.maps.event.addListener(marker, "click", function(){info.open(map,marker);});
+                google.maps.event.addListener(marker1, "click", function(){info1.open(map,marker1);});
+
+                google.maps.event.addListener(marker2, "click", function(){info2.open(map,marker2);});
+
+                google.maps.event.addListener(marker3, "click", function(){info3.open(map,marker3);});
+
+			}
+		</script>
+		
+    <link href="css/tinyslide.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" /></script>
+    <script src="js/tinyslide.js" /></script>
+  </head>
+  <body>
+  <div id="bannerdiv">
+    <section id="tiny" class="tinyslide">
+      <aside class="slides">
+        <figure>
+          <img src="images/slide1.jpg" alt="" />
+          <figcaption>
+            Safari
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide2.jpg" alt="" />
+          <figcaption>
+            Highway
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide3.jpg" alt="" />
+          <figcaption>
+            Scenary
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide4.jpg" alt="" />
+          <figcaption>
+            Buddha
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide5.jpg" alt="" />
+          <figcaption>
+         Mountain
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+    <script>
+      var tiny = $('#tiny').tiny().data('api_tiny');
+    </script>
+	
+	</div>
+	<div id="menudiv">
+	
+<table> 
+<tr>
+	<td> <a href=index.html> Home
+	</a></td>
+	<td><a href=intro.html>Introduction</a></td>
+	<td><a href=jsworld.html>Jsworld</a></td>
+	<td><a href=score.html>Score</a></td>
+	<td><a href=shop.html>Shop</a></td>
+	<td><a href=map.html>Map</a></td>
+	<td><a href=anime.html>Anime</a></td>
+</tr>
+</table>
+	</div>
+<div id="bodydiv">
+<div id="mymap"></div>
+
+
+</div>
+
+<div id="footerdiv">
+<p>
+<a href=index.html>Home</a> | 
+<a href=intro.html>Introduction</a> | 
+<a href=score.html>Score</a> | 
+<a href=shop.html>Shop</a> |
+ <a href=map.html>Map</a> |
+ <a href=anime.html>Anime</a>
+<br/>
+copyright all reserved @amrita banjade.&copy; 2019
+</p>
+
+</div>
+
+
+
+  </body>
+</html>

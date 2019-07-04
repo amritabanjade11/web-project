@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home Page</title>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<style>
+		p{
+			padding:10px;
+		}
+			body{
+			height:100%;;
+			background-image:url("images/color.jpg");
+			}
+			#bannerdiv{
+			width:80%;
+			height:200px;
+			margin:auto;
+			}
+			#menudiv{
+			background-color:white;
+			height:50px;
+			width:80%;
+			margin:auto;
+			}
+			#menudiv table{
+			background-color:skyblue;
+			width:100%;
+			height:50px;
+			}
+			#menudiv td{
+			width:14%;
+			text-align:center;
+			color:maroon;
+			}
+			#menudiv a:link{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#menudiv a:visited{
+			color:green;
+			text-decoration:none;
+			}
+			#menudiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			#bodydiv{
+			color:red;
+			background-image:linear-gradient(white,pink);
+			height:1000px;
+			width:80%;
+			margin:auto;
+			
+			}
+		#footerdiv {
+		//background-image:linear-gradient(#f45042,#4f4747);
+		height:150px;
+		width:80%;
+		margin:auto;
+		
+		
+		}
+		#footerdiv p{
+		color:white;
+		text-align:center;
+		padding:5px;
+		
+		}
+		#footerdiv a:link{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:hover{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:visited{
+			color:white;
+			text-decoration:none;
+			}
+			#footerdiv a:active{
+			color:red;
+			text-decoration:none;
+			}
+			form td{
+		align:left;
+		height:50px;
+		width: 250px;
+	}
+	ul{
+		list-style-type: none;
+		
+	}
+		</style>
+		
+    <link href="css/tinyslide.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" /></script>
+    <script src="js/tinyslide.js" /></script>
+  </head>
+  <body>
+  <div id="bannerdiv">
+    <section id="tiny" class="tinyslide">
+      <aside class="slides">
+        <figure>
+          <img src="images/slide1.jpg" alt="" />
+          <figcaption>
+            Safari
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide2.jpg" alt="" />
+          <figcaption>
+            Highway
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/slide3.jpg" alt="" />
+          <figcaption>
+            Scenary
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide4.jpg" alt="" />
+          <figcaption>
+            Buddha
+          </figcaption>
+        </figure>
+		<figure>
+          <img src="images/slide5.jpg" alt="" />
+          <figcaption>
+         Mountain
+          </figcaption>
+        </figure>
+      </aside>
+    </section>
+    <script>
+      var tiny = $('#tiny').tiny().data('api_tiny');
+    </script>
+	
+	</div>
+	<div id="menudiv">
+	
+<table> 
+<tr>
+	<td> <a href=index.html> Home
+	</a></td>
+	<td><a href=intro.html>Introduction</a></td>
+		<td><a href=jsworld.html>Jsworld</a></td>
+	<td><a href=score.html>Score</a></td>
+	<td><a href=shop.html>Shop</a></td>
+	<td><a href=map.html>Map</a></td>
+	<td><a href=anime.html>Anime</a></td>
+</tr>
+</table>
+	</div>
+<div id="bodydiv">
+    <form name="form1">
+	<table align="center" width="100%" style="margin:0px;padding:0px;" border="0px">
+  	<tbody>
+    <tr>
+		<td colspan="3" align="center" height="50px"><h1>PLEASE FILL UP THE FORM</h1></td>
+     
+    </tr>
+    <tr>
+      <td align="center">Name:</td>
+      <td><input type="text" name="name" value=""/></td>
+      <td><input type="button" onclick="showName()" value="Click Me"/>
+		<script>
+		  function showName(){
+			  
+			  var fullname=document.form1.name.value;
+			  alert("Hello! "+fullname );
+		  }
+		  
+		  </script>
+		
+		</td>
+    </tr>
+  
+ 
+    <tr>
+      <td align="center">Gender: </td>
+      <td><input type="radio" name="gender" value="Male"/>Male
+      <input type="radio" name="gender" value="Female"/>Female</td>
+	  <td><input type="button" onclick="showGender()" value="Click Me"/>
+		<script>
+		  function showGender(){
+
+			  var str=document.form1.gender.value;
+			  alert("You are : "+str );
+		  }
+
+		 </script>
+
+	</td>
+    </tr>
+    <tr>
+      <td align="center">Languages:</td>
+      <td>
+		  <ul>
+		  
+			<li><input type="checkbox" name="language" value="English" checked/>English</li>
+			<li><input type="checkbox" name="language" value="Nepali"/>Nepali</li>
+			<li><input type="checkbox" name="language" value="Chinese"/>Chinese</li>
+			<li><input type="checkbox" name="language" value="Japanese"/>Japanese</li>
+		  </ul>
+		
+		</td>
+	  <td><input type="button" onclick="showLanguage()" value="Click Me"/>
+		
+		  <script type="text/javascript">
+			function showLanguage(){
+				var lang=document.getElementsByName('language');
+				var selectedItems="";
+				for(var i=0; i<lang.length; i++){
+					if(lang[i].type=='checkbox' && lang[i].checked==true)
+						selectedItems+=lang[i].value+"\n";
+				}
+				alert("You can speak : "+ "\n"+ selectedItems);
+			}
+		  </script>
+
+	</td>
+    </tr>
+    <tr>
+      <td align="center">Choose your school: </td>
+      <td>
+		 <select name="college">
+		 <option value="Hyakumanben" selected>Hyakumanben</option> 
+		 <option value="Kyoto Ekimae">Kyoto Ekimae</option> 
+		 <option value="Rakuhoku">Rakuhoku</option> 
+		 <option value="Kamogawa">Kamogawa</option> 
+		 </select>
+		
+		</td>
+	  <td><input type="button" onclick="showCollege()" value="Click Me"/>
+		<script>
+		  function showCollege()
+			{
+			  
+					  var str=document.form1.college.value;
+					  alert("You selected: "+str );
+				
+		  }
+
+		 </script>
+
+	</td>
+    </tr>
+    <tr>
+      <td align="center">Choose the course:</td>
+      <td>
+		 <select name="course" multiple="multiple">
+		 <option value="" selected>Select from the courses</option>
+		 <option value="Web Designing" >Web Designing</option> 
+		 <option value="IT administrator">IT administrator</option> 
+		 <option value="Data Analyst">Data Analyst</option> 
+		 <option value="IT E-business">IT E-business</option> 
+		 </select>
+		
+		</td>
+	  <td><input type="button" onclick="showCourse()" value="Click Me"/>
+		<script>
+		  function showCourse()
+			{
+			  
+					  var str=document.form1.course.value;
+					  alert("You selected: "+str );
+				
+		  }
+
+		 </script>
+
+    </tr>
+		<tr>
+			<td colspan="2" align="left">&nbsp;<h3 style="padding-left:10px;">Check the Onmouseover and Onmouseout event here in this pic:</h3>
+		
+			<img src="images/flowers.jpg" height="150px" width="350px" onmouseover="this.src='images/images1.jpg'" onmouseout="this.src='images/flowers.jpg'"/>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+	<td>
+	
+		<p style="text-decoration:underline;" onclick="openWindow()">Google</p>
+		   <script>
+				var newWindow;
+
+				function openWindow() {
+				  newWindow = window.open("https://www.google.com", "", "width=250, height=250");
+				}
+
+				
+				</script>
+		
+	</td>
+	<td>
+		<p style="text-decoration:underline;" onclick="resizeWindow()">Resize window</p>
+		<script>
+			function resizeWindow() {
+				  newWindow.resizeTo(500, 500);
+				  newWindow.focus();
+				}
+		  </script>
+		
+	</td>
+	<td>
+		<p style="text-decoration:underline;" onclick="closeWindow()">Close new window</p>
+		   <script>
+				function closeWindow() {
+				  if(newWindow){
+					  newWindow.close();
+					  newWindow=null;
+					  
+				  }
+				}
+				</script>
+		
+	</td>
+		
+		</tr>
+		<tr>
+		<td><p onclick=document.getElementById("footerdiv").style.backgroundColor="skyblue" value="change color">Change background color to skyblue</p></td>
+    </tr>
+	<tr>
+      <td><p style="text-decoration:underline;" onclick=document.getElementById("footerdiv").style.backgroundColor="maroon">Change background color to maroon</p></td>
+	  </tr>
+	  <tr>
+    
+      <td><p style="text-decoration:underline;" onclick=document.getElementById("footerdiv").style.backgroundColor="red">Change background color to red</p></td>
+	  </tr>
+			
+			
+			
+    </tr>
+   
+    
+  	</tbody>
+	</table>
+<table border="0" align="center" width="300" height="300">
+<tr>
+<td><button onclick="showimg1()" name="rose">rose</button></td>
+<td><button onclick="showimg2()" name="redrose">redrose</button></td>
+
+<tr>
+<td colspan="4" rowspan="4">
+<img src="a.jpg" width="300" height="300" id="img"/>
+<script>
+function showimg1(){
+	
+	var img1="rose.jpg"
+	document.getElementById("img").src=img1.replace('300*250', '300*350');
+
+}
+function showimg2(){
+	
+	var img1="redrose.jpg"
+	document.getElementById("img").src=img1.replace('300*250', '300*300');
+
+}
+
+</script>
+
+</td>
+</tr>
+</table>
+
+	
+	</form>
+
+
+</div>
+
+<div id="footerdiv">
+<p>
+<a href=index.html>Home</a> | 
+<a href=intro.html>Introduction</a> | 
+<a href=score.html>Score</a> | 
+<a href=shop.html>Shop</a> |
+ <a href=map.html>Map</a> |
+ <a href=anime.html>Anime</a>
+<br/>
+copyright all reserved @amrita banjade.&copy; 2019
+</p>
+
+</div>
+
+
+
+  </body>
+</html>
